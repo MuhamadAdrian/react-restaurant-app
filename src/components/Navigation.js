@@ -1,11 +1,45 @@
+import { motion } from "framer-motion";
 const { NavLink } = require("react-router-dom");
+
+const slideDownVariants = {
+  from: {
+    opacity: 0,
+    y: -60,
+  },
+  to: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const slideDownChildrenVariants = {
+  from: {
+    opacity: 0,
+    y: -60,
+  },
+  to: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 function Navigation() {
   return (
-    <header className="flex justify-between items-center w-full fixed top-0 left-0 text-white py-5 px-8">
+    <motion.header
+      variants={slideDownVariants}
+      initial="from"
+      animate="to"
+      className="flex justify-between items-center w-full fixed top-0 left-0 text-white py-5 px-8"
+    >
       <div className="logo">Logo</div>
       <ul className="list-none">
-        <li className="inline-block ml-5 my-3">
+        <motion.li
+          variants={slideDownChildrenVariants}
+          className="inline-block ml-5 my-3"
+        >
           <NavLink
             activeStyle={{
               fontWeight: "bold",
@@ -16,8 +50,11 @@ function Navigation() {
           >
             Home
           </NavLink>
-        </li>
-        <li className="inline-block ml-5 my-3">
+        </motion.li>
+        <motion.li
+          variants={slideDownChildrenVariants}
+          className="inline-block ml-5 my-3"
+        >
           <NavLink
             activeStyle={{
               fontWeight: "bold",
@@ -27,8 +64,11 @@ function Navigation() {
           >
             Food
           </NavLink>
-        </li>
-        <li className="inline-block ml-5 my-3">
+        </motion.li>
+        <motion.li
+          variants={slideDownChildrenVariants}
+          className="inline-block ml-5 my-3"
+        >
           <NavLink
             activeStyle={{
               fontWeight: "bold",
@@ -38,8 +78,11 @@ function Navigation() {
           >
             Drink
           </NavLink>
-        </li>
-        <li className="inline-block ml-5 my-3">
+        </motion.li>
+        <motion.li
+          variants={slideDownChildrenVariants}
+          className="inline-block ml-5 my-3"
+        >
           <NavLink
             activeStyle={{
               fontWeight: "bold",
@@ -49,8 +92,11 @@ function Navigation() {
           >
             Desserts
           </NavLink>
-        </li>
-        <li className="inline-block ml-5">
+        </motion.li>
+        <motion.li
+          variants={slideDownChildrenVariants}
+          className="inline-block ml-5"
+        >
           <NavLink
             activeStyle={{
               fontWeight: "bold",
@@ -59,9 +105,9 @@ function Navigation() {
           >
             My Order
           </NavLink>
-        </li>
+        </motion.li>
       </ul>
-    </header>
+    </motion.header>
   );
 }
 
