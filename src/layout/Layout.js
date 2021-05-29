@@ -1,12 +1,11 @@
 import Navigation from "../components/Navigation";
 import ToastOrder from "../components/order/ToastOrder";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import OrderContext from "../store/order-context";
 import { AnimatePresence } from "framer-motion";
 
 function Layout({ children }) {
   const orderCtx = useContext(OrderContext);
-  const [showToast, setShowToast] = useState(false);
 
   return (
     <div>

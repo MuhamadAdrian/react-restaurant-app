@@ -11,7 +11,7 @@ function QuantityPopup({ id, quantity, setQuantity }) {
     if (thisProduct) {
       setQuantity(thisProduct.quantity);
     }
-  }, []);
+  }, [setQuantity, thisProduct]);
 
   return (
     <motion.div

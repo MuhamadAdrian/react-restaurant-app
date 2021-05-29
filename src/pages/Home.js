@@ -11,6 +11,7 @@ function Home() {
       variants={fadeVariants}
       initial="from"
       animate="to"
+      exit="from"
       className="bg-no-repeat"
       style={{ backgroundImage: `url(${BgHome})` }}
     >

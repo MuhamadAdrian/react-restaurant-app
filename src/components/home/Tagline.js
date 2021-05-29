@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 function Tagline() {
   return (
     <>
-      {" "}
       <motion.h1
         variants={slideRightVariants}
         className="text-8xl font-semibold leading-tight mb-3"

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { scaleOnHover } from "../../animation/animation";
 import { useContext } from "react";
 import OrderContext from "../../store/order-context";

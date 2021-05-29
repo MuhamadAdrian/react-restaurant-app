@@ -73,3 +73,39 @@ export const zoomInOut = {
     scale: 1,
   },
 };
+
+export const slideLeftVariants = {
+  from: {
+    opacity: 0,
+    x: 40,
+  },
+  to: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 4,
+      damping: 20,
+      duration: 2,
+      staggerChildren: 0.2,
+      delayChildren: 0.5,
+    },
+  },
+};
+
+export const slideLeftChildrenVariants = {
+  from: {
+    opacity: 0,
+    x: 40,
+  },
+  to: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+      stiffness: 120,
+    },
+  },
+};

@@ -7,7 +7,8 @@ export const dummy_product = [
     category: "food",
     type: {
       id: 1,
-      name: "beef",
+      name: "Beef",
+      code: "beef",
     },
     superior: true,
   },
@@ -19,7 +20,8 @@ export const dummy_product = [
     category: "food",
     type: {
       id: 1,
-      name: "beef",
+      name: "Beef",
+      code: "beef",
     },
   },
   {
@@ -30,7 +32,8 @@ export const dummy_product = [
     category: "food",
     type: {
       id: 1,
-      name: "beef",
+      name: "Beef",
+      code: "beef",
     },
   },
   {
@@ -41,7 +44,8 @@ export const dummy_product = [
     category: "food",
     type: {
       id: 2,
-      name: "chicken",
+      name: "Chicken",
+      code: "chicken",
     },
   },
   {
@@ -52,7 +56,8 @@ export const dummy_product = [
     category: "food",
     type: {
       id: 2,
-      name: "chicken",
+      name: "Chicken",
+      code: "chicken",
     },
   },
   {
@@ -63,7 +68,8 @@ export const dummy_product = [
     category: "drink",
     type: {
       id: 3,
-      name: "ice_tea",
+      name: "Ice Tea",
+      code: "ice_tea",
     },
     superior: true,
   },
@@ -75,7 +81,8 @@ export const dummy_product = [
     category: "drink",
     type: {
       id: 3,
-      name: "ice_tea",
+      name: "Ice Tea",
+      code: "ice_tea",
     },
   },
   {
@@ -86,7 +93,8 @@ export const dummy_product = [
     category: "drink",
     type: {
       id: 3,
-      name: "ice_tea",
+      name: "Ice Tea",
+      code: "ice_tea",
     },
   },
   {
@@ -97,7 +105,8 @@ export const dummy_product = [
     category: "drink",
     type: {
       id: 4,
-      name: "hot_tea",
+      name: "Hot Tea",
+      code: "hot_tea",
     },
   },
   {
@@ -108,7 +117,8 @@ export const dummy_product = [
     category: "drink",
     type: {
       id: 4,
-      name: "hot_tea",
+      name: "Hot Tea",
+      code: "hot_tea",
     },
   },
   {
@@ -119,7 +129,8 @@ export const dummy_product = [
     category: "desserts",
     type: {
       id: 5,
-      name: "special_desert",
+      name: "Special Desserts",
+      code: "special_desserts",
     },
     superior: true,
   },
@@ -131,7 +142,8 @@ export const dummy_product = [
     category: "desserts",
     type: {
       id: 5,
-      name: "special_desert",
+      name: "Special Desserts",
+      code: "special_desserts",
     },
   },
   {
@@ -142,7 +154,8 @@ export const dummy_product = [
     category: "desserts",
     type: {
       id: 5,
-      name: "special_desert",
+      name: "Special Desserts",
+      code: "special_desserts",
     },
   },
   {
@@ -153,7 +166,8 @@ export const dummy_product = [
     category: "desserts",
     type: {
       id: 6,
-      name: "basic_desert",
+      name: "Basic Desserts",
+      code: "basic_desserts",
     },
   },
   {
@@ -164,34 +178,8 @@ export const dummy_product = [
     category: "desserts",
     type: {
       id: 6,
-      name: "basic_desert",
+      name: "Basic Desserts",
+      code: "basic_desserts",
     },
-  },
-];
-
-export const dummy_type = [
-  {
-    id: 1,
-    name: "beef",
-  },
-  {
-    id: 2,
-    name: "chicken",
-  },
-  {
-    id: 3,
-    name: "ice_tea",
-  },
-  {
-    id: 4,
-    name: "hot_tea",
-  },
-  {
-    id: 5,
-    name: "special_desert",
-  },
-  {
-    id: 6,
-    name: "basic_desert",
   },
 ];

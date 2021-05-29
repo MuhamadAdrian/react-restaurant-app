@@ -40,10 +40,8 @@ export function OrderContextProvider({ children }) {
           return prevItem;
         });
       } else if (existItem.quantity <= 1) {
-        let orderItemsCopy = orderItems;
-        let index = orderItemsCopy.indexOf(existItem);
         setOrderItems((prevItem) => {
-          if (prevItem.length == 1) {
+          if (prevItem.length === 1) {
             setShowModal(false);
           }
           return prevItem.filter((item) => item.id !== id);

@@ -35,7 +35,7 @@ function Navigation() {
       variants={slideDownVariants}
       initial="from"
       animate="to"
-      className="flex justify-between items-center w-full fixed top-0 left-0 text-white py-5 px-8"
+      className="flex justify-between items-center w-full fixed top-0 left-0 text-white py-5 px-8 z-50"
     >
       <div className="logo">Logo</div>
       <ul className="list-none">

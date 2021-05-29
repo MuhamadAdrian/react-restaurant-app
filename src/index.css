@@ -3,6 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    @variants responsive {
+      .rounded-6xl {
+          border-radius: 3rem
+      }
+      .rounded-5xl {
+          border-radius: 2.5rem
+      }
+      .rounded-4xl {
+          border-radius: 2rem
+      }
+    }
+  }
+
 body {
     font-family: 'Poppins', sans-serif;
 }
+
