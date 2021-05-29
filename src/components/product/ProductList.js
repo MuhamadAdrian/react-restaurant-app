@@ -1,7 +1,7 @@
 import ProductItem from "./ProductItem";
 import { motion } from "framer-motion";
 
-function ProductList({ superiorProduct }) {
+function ProductList({ products }) {
   const slideUpChildrenVariants = {
     from: {
       opacity: 0,
@@ -14,7 +14,7 @@ function ProductList({ superiorProduct }) {
   };
   return (
     <ul className="flex flex-row flex-wrap gap-4 list-none">
-      {superiorProduct.map((product) => (
+      {products.map((product) => (
         <motion.li key={product.id} variants={slideUpChildrenVariants}>
           <ProductItem id={product.id} product={product} />
         </motion.li>

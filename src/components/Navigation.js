@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-const { NavLink } = require("react-router-dom");
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import OrderContext from "../store/order-context";
 
 const slideDownVariants = {
   from: {
@@ -27,6 +29,7 @@ const slideDownChildrenVariants = {
 };
 
 function Navigation() {
+  const orderCtx = useContext(OrderContext);
   return (
     <motion.header
       variants={slideDownVariants}
@@ -104,6 +107,9 @@ function Navigation() {
             to="/order"
           >
             My Order
+            <span className="rounded-lg w-8 h-8 bg-indigo-500 p-2 ml-3">
+              {orderCtx.totalOrderItems}
+            </span>
           </NavLink>
         </motion.li>
       </ul>

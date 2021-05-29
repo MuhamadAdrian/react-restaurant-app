@@ -25,7 +25,7 @@ function Product() {
       <motion.p variants={slideUpChildrenVariants} className="mb-5">
         The Superior Product
       </motion.p>
-      <ProductList superiorProduct={superior} />
+      <ProductList products={superior} />
     </motion.div>
   );
 }

@@ -36,14 +36,18 @@ export function OrderContextProvider({ children }) {
       let existItem = orderItems.find((item) => item.id === id);
       if (existItem.quantity > 1) {
         existItem.quantity -= 1;
+        setOrderItems((prevItem) => {
+          return prevItem;
+        });
       } else if (existItem.quantity <= 1) {
         let orderItemsCopy = orderItems;
         let index = orderItemsCopy.indexOf(existItem);
-        orderItemsCopy.splice(index, 1);
-        setOrderItems(orderItemsCopy);
-        if (orderItemsCopy.length === 0) {
-          setShowModal(false);
-        }
+        setOrderItems((prevItem) => {
+          if (prevItem.length == 1) {
+            setShowModal(false);
+          }
+          return prevItem.filter((item) => item.id !== id);
+        });
       }
     }
   };
