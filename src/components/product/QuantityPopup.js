@@ -27,7 +27,7 @@ function QuantityPopup({ id, quantity, setQuantity }) {
       exit="from"
       className="w-8 h-8 absolute flex items-center justify-center -bottom-3 -left-3 rounded-xl bg-indigo-500 text-white"
     >
-      <p className="text-center self-center m-auto">{quantity}</p>
+      <p className="text-center self-center m-auto">{quantity}x</p>
     </motion.div>
   );
 }

@@ -21,11 +21,11 @@ function Superior({ superior }) {
         className="bg-white bg-opacity-10 h-screen rounded-5xl  p-8 relative"
       >
         <div className="relative">
-          <div className="relative w-full mb-5 h-60 overflow-hidden rounded-3xl">
+          <div className="relative w-full mb-5 h-60 rounded-3xl">
             <img
               src={superior.img}
               alt="chicken steak"
-              className="absolute w-full h-full object-cover object-center "
+              className="absolute w-full h-full object-contain object-center "
             />
           </div>
           <div className="">

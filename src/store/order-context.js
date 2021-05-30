@@ -36,9 +36,6 @@ export function OrderContextProvider({ children }) {
       let existItem = orderItems.find((item) => item.id === id);
       if (existItem.quantity > 1) {
         existItem.quantity -= 1;
-        setOrderItems((prevItem) => {
-          return prevItem;
-        });
       } else if (existItem.quantity <= 1) {
         setOrderItems((prevItem) => {
           if (prevItem.length === 1) {
