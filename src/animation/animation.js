@@ -11,9 +11,10 @@ export const slideRightVariants = {
       type: "spring",
       stiffness: 180,
       mass: 4,
-      damping: 20,
+      damping: 30,
       duration: 2,
       staggerChildren: 0.2,
+      delayChildren: 1,
     },
   },
 };

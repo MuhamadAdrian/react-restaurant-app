@@ -3,7 +3,12 @@ import OrderContext from "../store/order-context";
 import Container from "../components/ui/Container";
 import ProductList from "../components/product/ProductList";
 import { motion } from "framer-motion";
-import { fadeVariants, slideRightVariants } from "../animation/animation";
+import {
+  fadeVariants,
+  slideLeftChildrenVariants,
+  slideRightVariants,
+  slideLeftVariants,
+} from "../animation/animation";
 import DetailOrder from "../components/order/DetailOrder";
 
 function Order() {
@@ -34,6 +39,7 @@ function Order() {
       variants={fadeVariants}
       initial="from"
       animate="to"
+      exit="from"
       className="py-28"
     >
       <Container>
@@ -47,13 +53,20 @@ function Order() {
           <div className="col-span-2">
             {orderedListByCategory.map((orderedItem) => {
               return (
-                <div key={orderedItem.category} className="mt-5">
+                <motion.div
+                  variants={slideRightVariants}
+                  key={orderedItem.category}
+                  className="mt-5"
+                >
                   <h3 className="ml-3 text-sm text-gray-400 mb-2 uppercase font-semibold">
                     {orderedItem.category}
                   </h3>
 
-                  <ProductList products={orderedItem.data} />
-                </div>
+                  <ProductList
+                    products={orderedItem.data}
+                    animation={slideRightVariants}
+                  />
+                </motion.div>
               );
             })}
           </div>
