@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import {
   slideLeftChildrenVariants,
-  slideLeftVariants,
   slideUpChildrenVariants,
   slideUpVariants,
 } from "../../animation/animation";
+
+import formatRupiah from "../../helper/formatRupiah";
 
 function DetailOrder({ orderedListByCategory }) {
   let newStructureDataOrderedList = orderedListByCategory.map((tes) => {
@@ -53,7 +54,7 @@ function DetailOrder({ orderedListByCategory }) {
                         - {data.name} {data.quantity} x
                       </td>
                       <td className="text-right w-2/6">
-                        {data.price * data.quantity}
+                        {formatRupiah(data.price * data.quantity)}
                       </td>
                     </motion.tr>
                   );
@@ -61,7 +62,7 @@ function DetailOrder({ orderedListByCategory }) {
               </tbody>
             </table>
             <p className="text-right text-sm">
-              Total : {orderedItem.totalPriceCategory}
+              Total : {formatRupiah(orderedItem.totalPriceCategory)}
             </p>
           </motion.div>
         );
@@ -71,7 +72,7 @@ function DetailOrder({ orderedListByCategory }) {
         className="text-xl mt-5 text-right flex justify-between"
       >
         <span className="text-left">Total Price :</span>{" "}
-        <span>{totalPrice}</span>
+        <span>{formatRupiah(totalPrice)}</span>
       </motion.p>
     </motion.div>
   );

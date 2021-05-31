@@ -98,7 +98,7 @@ export const slideLeftVariants = {
 export const slideLeftChildrenVariants = {
   from: {
     opacity: 0,
-    x: 40,
+    x: 20,
   },
   to: {
     opacity: 1,

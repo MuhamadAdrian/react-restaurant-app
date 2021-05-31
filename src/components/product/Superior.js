@@ -3,6 +3,7 @@ import {
   slideUpChildrenVariants,
   slideUpVariants,
 } from "../../animation/animation";
+import formatRupiah from "../../helper/formatRupiah";
 
 function Superior({ superior }) {
   return (
@@ -31,7 +32,7 @@ function Superior({ superior }) {
           <div className="">
             <p className=" text-2xl">{superior.name}</p>
             <p className=" text-3xl font-bold mt-10 text-right text-gray-900">
-              {superior.price}
+              {formatRupiah(superior.price)}
             </p>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { scaleOnHover } from "../../animation/animation";
 import { useContext } from "react";
 import OrderContext from "../../store/order-context";
 import QuantityPopup from "./QuantityPopup";
+import formatRupiah from "../../helper/formatRupiah";
 
 function ProductItem({ product }) {
   const orderCtx = useContext(OrderContext);
@@ -33,7 +34,7 @@ function ProductItem({ product }) {
         <div className="p-5 pt-28">
           <h2 className=" truncate">{product.name}</h2>
           <p className="text-right mt-3 text-indigo-400 text-lg">
-            {product.price}
+            {formatRupiah(product.price)}
           </p>
         </div>
       </div>
